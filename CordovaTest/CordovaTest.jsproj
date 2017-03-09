@@ -85,8 +85,21 @@
     <Content Include="**\**" Exclude="**\platforms\**;**\bin\**;**\bld\**;**\node_modules\**;.gitignore;CordovaTest.*" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="plugins\cordova-plugin-device\types\index.d.ts" />
+    <Content Remove="plugins\cordova-plugin-inappbrowser\types\index.d.ts" />
+    <Content Remove="plugins\cordova-plugin-network-information\types\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Update="config.xml">
       <SubType>Designer</SubType>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4a0dddb5-7a95-4fbf-97cc-616d07737a77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="plugins\cordova-plugin-device\types\index.d.ts" />
+    <TypeScriptCompile Include="plugins\cordova-plugin-inappbrowser\types\index.d.ts" />
+    <TypeScriptCompile Include="plugins\cordova-plugin-network-information\types\index.d.ts" />
   </ItemGroup>
 </Project>
